@@ -5,7 +5,7 @@
     margin: 0;
     position: relative;
 }
-.cover .cover-title{
+.cover-title{
     position: absolute;
     top: 40%;
     left: 20%;
@@ -14,7 +14,7 @@
     font-family: 'Archivo Black';
     z-index: 1;
 }
-.cover .cover-description{
+.cover-description{
     position: absolute;
     top: 60%;
     left: 20%;
@@ -23,6 +23,8 @@
     font-family: 'Archivo';
     z-index: 1;
 }
-.cover .cover-background{
+.cover-background{
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
 }
