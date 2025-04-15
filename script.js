@@ -1,11 +1,21 @@
-var elementsToFade = document.querySelectorAll('.fade-in')
-elementsToFade.forEach(el => {
-    window.addEventListener('scroll', (e) => {
-        if(window.scrollY >= el.scrollHeight - 100){
+window.addEventListener('scroll', (e) => {
+    checkFade(e)
+})
+
+function checkFade(e){
+    var elementsToFade = document.querySelectorAll('.fade-in')
+    elementsToFade.forEach(el => {
+        var rect = el.getBoundingClientRect()
+        if(window.innerHeight >= rect.y + 100 && rect.y >  0 - rect.height + 50){
             el.classList.add('visible')
+        }else if(window.innerHeight < rect.y){
+            el.classList.remove('visible')
+        }else if(rect.y <  0 - rect.height){
+            el.classList.remove('visible')
         }
     })
-})
+}
+checkFade()
 
 function parallax() {
     var s = document.querySelectorAll(".slow");
