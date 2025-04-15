@@ -13,12 +13,14 @@
     <div class="header">
 
     </div>
+
+    <!-- Cover -->
     <div class="cover">
-        <h1 class="cover-title">
+        <h1 class="cover-title slow" style="max-height: 25%;" data-scroll-starting-point="25%" data-scroll-speed=5 >
             Karl Jensen
         </h1>
-        <p class="cover-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto officiis recusandae id eligendi molestias! Officia ad adipisci praesentium harum ducimus aut. Consectetur omnis obcaecati iusto eos ex pariatur, eius repellat!
+        <p class="cover-description slow" data-scroll-starting-point="50%" data-scroll-speed=10 >
+            Lorem ipsum dolor sit amet
         </p>
         <img src="src/downarrow.svg" alt="" srcset="" onclick="document.getElementById('section-1').scrollIntoView({
             behavior: 'smooth'
@@ -26,29 +28,35 @@
         <div class="cover-bg-overlay">
 
         </div>
-        <img src="src/profile.png" alt="" class="cover-profile-photo">
-        <video src="src/bg-footage.mp4" class="cover-background" muted autoplay loop></video>
+        <img src="src/profile.png" alt="" class="cover-profile-photo slow" data-scroll-starting-point="0%" data-scroll-speed=3>
+        <video src="src/bg-footage.mp4" class="cover-background" muted autoplay loop id="coverBackground"></video>
     </div>
 
+    <!-- Section 1 -->
     <div class="section1" id="section-1">
-        <h1 class="section1-title">
+        <h1 class="section1-title fade-in text">
             Section 1
         </h1>
-        <p class="section1-description">
+        <p class="section1-description fade-in text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus reprehenderit repellat repudiandae repellendus optio saepe? Hic doloribus iste consequuntur blanditiis placeat maxime asperiores et eum sit. Nulla, omnis qui.
         </p>
-        <img src="src/profile.jpg" alt="" srcset="" class="section1-img">
+        <img src="src/profile.jpg" alt="" srcset="" class="section1-img fade-in slow" data-scroll-starting-point="20%" data-scroll-speed=5>
+        
     </div>
+
+    <!-- Section 2 -->
     <div class="section2" id="section-2">
-        <h1 class="section2-title">
+        <img src="src/profile.jpeg" alt="" srcset="" class="section2-img fade-in slow" data-scroll-starting-point="20%" data-scroll-speed=8>
+        <h1 class="section2-title fade-in text">
             Section 2
         </h1>
-        <p class="section2-description">
+        <p class="section2-description fade-in text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus reprehenderit repellat repudiandae repellendus optio saepe? Hic doloribus iste consequuntur blanditiis placeat maxime asperiores et eum sit. Nulla, omnis qui.
         </p>
     </div>
 
-    <div class="footer" id="section-1">
+    <!-- Footer -->
+    <div class="footer" id="footer">
         <div class="footer-link-holder">
             <div class="footer-links">
                 <span class="placeholder"> </span>

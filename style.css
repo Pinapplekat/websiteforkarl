@@ -2,13 +2,16 @@ body{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .cover{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    position: relative;
+    position:relative;
+    perspective: 1px;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .cover-title{
     position: absolute;
@@ -19,6 +22,7 @@ body{
     font-family: 'Archivo Black';
     font-weight: 500;
     z-index: 1;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 .cover-description{
     position: absolute;
@@ -29,6 +33,7 @@ body{
     font-family: 'Archivo';
     z-index: 1;
     max-width: 60vw;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 .cover-background{
     z-index: -1;
@@ -44,7 +49,7 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    backdrop-filter: brightness(0.6);
+    backdrop-filter: brightness(0.5);
     pointer-events: none;
 }
 .cover-scroll-arrow{
@@ -71,10 +76,17 @@ body{
 
 .section1{
     background-color: rgba(203, 203, 203, 0.877);
-    height: 40vh;
+    min-height: 40vh;
+    width: 100vw;
     max-width: 100vw;
+    height: fit-content;
     margin: 0;
     padding: 15px;
+    padding-left: 200px;
+    position: relative;
+    perspective: 1px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .section1-title{
     margin-top: 20px;
@@ -83,19 +95,30 @@ body{
     font-family: 'Archivo Black'
 }
 .section1-description{
+    max-width: 30vw;
     font-size: 20px;
     font-family: 'Archivo'
 }
 .section1-img{
-    height: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    transform: translate(0, -50%);
+    right: 0;
 }
 
 .section2{
     background-color: rgba(231, 231, 231, 0.877);
-    height: 40vh;
+    min-height: 40vh;
+    height: fit-content;
     max-width: 100vw;
     margin: 0;
     padding: 15px;
+    padding-right: 200px;
+    padding-left: 40vw;
+    position: relative;
+    overflow-y: hidden;
 }
 .section2-title{
     margin-top: 20px;
@@ -107,6 +130,15 @@ body{
     font-size: 20px;
     font-family: 'Archivo'
 }
+.section2-img{
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 25vw;
+    transform: translate(0, -50%);
+    right: 0;
+}
+
 
 .footer{
     background-color: rgb(12, 12, 12);
@@ -151,4 +183,56 @@ body{
     bottom: 0;
     left: 0;
     width: 100vw;
+    margin-bottom: 5px;
+}
+
+.fade-in{
+    opacity: 0;
+    /* transform: translateY(2vh); */
+    visibility: hidden;
+    transition: opacity 200ms ease-out, transform 300ms ease-out;
+    will-change: opacity, visibility;
+}
+.fade-in.text{
+    transform: translateY(2vh);
+}
+.fade-in.text.visible{
+    transform: none;
+}
+.fade-in.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 600px){
+    .section1-img{
+        left: 20px;
+    }
+    .section2-img{
+        left: 20px;
+    }
+    .section1, .section2{
+        padding-right: 0px !important;
+        max-width: 100vw;
+    }
+    .section1{
+        min-height: 40vh;
+        height: fit-content;
+        max-width: 100vw;
+        margin: 0;
+        padding: 15px;
+        padding-left: 40vw;
+        position: relative;
+        overflow-y: hidden;
+    }
+    .section1-description, .section2-description{
+        max-width: 50vw;
+        width: 50vw;
+    }
+    .cover-title{
+        top: 15%;
+    }
+    .cover-profile-photo{
+        filter: brightness(0.5);
+    }
 }
