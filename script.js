@@ -34,16 +34,23 @@ window.addEventListener("scroll", function(){
     parallax();
 });
 
+const coverTitle = document.querySelector('.cover-title')
 
-window.addEventListener('resize', sizeBg())
-sizeBg()
-
-function sizeBg(){
-    if(window.innerHeight > window.innerWidth){
-        document.getElementById('coverBackground').style.height = '100vh'
-        document.getElementById('coverBackground').style.width = 'auto'
-    }else if(window.innerHeight < window.innerWidth){
-        document.getElementById('coverBackground').style.height = 'auto'
-        document.getElementById('coverBackground').style.width = '100vw'
+var text = coverTitle.innerHTML
+text = text.split('')
+function typeCover(){
+    coverTitle.innerHTML = ''
+    for (let i=0; i<text.length; i++) { 
+        updateText(i); 
     }
+    setTimeout(() => {
+        document.querySelector('.cover-description').classList.add('visible')
+    }, 3500)
 }
+
+function updateText(char){
+    setTimeout(() => {
+        coverTitle.innerHTML += text[char]
+    }, Math.random()*100 + 100 * char)
+}
+typeCover()

@@ -4,6 +4,44 @@ body{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    margin: 0;
+    height: 5vh;
+}
+
+.header-link{
+    color: white;
+    font-family: 'Glamour Lifestyle';
+    font-size: 2vh;
+    transition: opacity 200ms;
+    text-decoration: none;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-link:hover{
+    opacity: 0.7;
+}
+
+.header-links{
+    width: 100vw;
+    position: absolute;
+    top: 40%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+
 .cover{
     height: 100vh;
     width: 100vw;
@@ -15,25 +53,27 @@ body{
 }
 .cover-title{
     position: absolute;
-    top: 25%;
-    left: 10%;
-    font-size: 70px;
+    top: 35%;
+    left: 7%;
+    font-size: 7vh;
     color: rgba(255, 255, 255, 1);
-    font-family: 'Archivo Black';
-    font-weight: 500;
+    font-family: 'Glamour Lifestyle';
+    font-weight: 900;
     z-index: 1;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    width: 1%;
+    text-shadow: 1px 1px 5px rgba(119, 119, 119, 0.5);
 }
 .cover-description{
     position: absolute;
-    top: 50%;
-    left: 10%;
-    font-size: 20px;
+    top: 65%;
+    left: 7%;
+    font-size: 3vh;
     color: rgba(203, 203, 203, 0.877);
-    font-family: 'Archivo';
+    font-family: 'Glamour Lifestyle';
     z-index: 1;
     max-width: 60vw;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
 }
 .cover-background{
     z-index: -1;
@@ -42,14 +82,15 @@ body{
 }
 .cover-bg-overlay{
     position: absolute;
-    z-index: 0;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    backdrop-filter: brightness(0.5);
+    background: url(src/cover.jpg);
+    background-position: center;
+    background-size: cover;
     pointer-events: none;
 }
 .cover-scroll-arrow{
@@ -61,10 +102,15 @@ body{
     height: auto;
     filter: brightness(0) invert(1);
     cursor: pointer;
-    transition: all 100ms;
+    transition: all 200ms;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+    border-radius: 50%;
 }
 .cover-scroll-arrow:hover{
-    opacity: 0.7;
+    opacity: 0.4;
 }
 .cover-profile-photo{
     position: absolute;
@@ -77,33 +123,35 @@ body{
 .section1{
     background-color: rgba(203, 203, 203, 0.877);
     min-height: 40vh;
-    width: 100vw;
-    max-width: 100vw;
     height: fit-content;
+    max-width: 100vw;
     margin: 0;
     padding: 15px;
-    padding-left: 200px;
+    padding-right: calc(200px + 35vw);
+    padding-left: 5vw;
     position: relative;
-    perspective: 1px;
     overflow-y: hidden;
-    overflow-x: hidden;
+    z-index: -1;
 }
 .section1-title{
     margin-top: 20px;
-    font-size: 40px;
-    font-weight: 400;
-    font-family: 'Archivo Black'
+    font-size: 4.5vh;
+    font-weight: 800;
+    width: 20vw;
+    font-family: 'Archivo';
+    z-index: 1;
 }
 .section1-description{
-    max-width: 30vw;
-    font-size: 20px;
-    font-family: 'Archivo'
+    font-size: 2vh;
+    font-family: 'Archivo';
+    width: 50vw;
+    z-index: 1;
 }
 .section1-img{
-    height: 200px;
+    height: 100%;
     position: absolute;
     top: 50%;
-    left: 50vw;
+    left: 60vw;
     transform: translate(0, -50%);
     right: 0;
     z-index: -1;
@@ -123,21 +171,22 @@ body{
 }
 .section2-title{
     margin-top: 20px;
-    font-size: 40px;
-    font-weight: 400;
-    font-family: 'Archivo Black'
+    font-size: 4.5vh;
+    font-weight: 800;
+    font-family: 'Archivo'
 }
 .section2-description{
-    font-size: 20px;
+    font-size: 2vh;
     font-family: 'Archivo'
 }
 .section2-img{
-    height: 200px;
+    height: 100%;
     position: absolute;
-    top: 50%;
-    left: 25vw;
+    top: -15%;
+    left: 20vw;
     transform: translate(0, -50%);
     right: 0;
+    z-index: 0;
 }
 
 
@@ -147,6 +196,8 @@ body{
     width: 100vw;
     height: 30vh;
     position: relative;
+    overflow-x: hidden;
+
 }
 
 .footer-link{
@@ -164,7 +215,7 @@ body{
     position: absolute;
     top: 40%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 0px;
@@ -205,16 +256,30 @@ body{
     visibility: visible;
 }
 
+.hidden{
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+}
+.visible{
+    opacity: 1;
+}
+
 @media only screen and (max-width: 600px){
     .section1-img{
-        left: 20px;
+        left: 50vw;
     }
     .section2-img{
         left: 20px;
     }
-    .section1, .section2{
+    .section1{
+        padding-left: 5vw !important;
+        padding-right: 0px !important;
+        overflow-x: hidden;
+    }
+    .section2{
         padding-right: 0px !important;
         max-width: 100vw;
+        overflow-x: hidden;
     }
     .section1{
         min-height: 40vh;
@@ -231,7 +296,7 @@ body{
         width: 50vw;
     }
     .cover-title{
-        top: 15%;
+        top: 35%;
     }
     .cover-profile-photo{
         filter: brightness(0.5);
