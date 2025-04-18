@@ -18,10 +18,11 @@ body{
 .header-link{
     color: white;
     font-family: 'Glamour Lifestyle';
-    font-size: 2vh;
+    font-size: 3vh;
     transition: opacity 200ms;
     text-decoration: none;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 .header-link:hover{
@@ -103,7 +104,7 @@ body{
     filter: brightness(0) invert(1);
     cursor: pointer;
     transition: all 200ms;
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3); */
     padding: 10px;
     padding-top: 13px;
     padding-bottom: 7px;
@@ -127,11 +128,10 @@ body{
     max-width: 100vw;
     margin: 0;
     padding: 15px;
-    padding-right: calc(200px + 35vw);
-    padding-left: 5vw;
+    padding-left: 40vw;
     position: relative;
     overflow-y: hidden;
-    z-index: -1;
+    z-index: 0;
 }
 .section1-title{
     margin-top: 20px;
@@ -139,13 +139,13 @@ body{
     font-weight: 800;
     width: 20vw;
     font-family: 'Archivo';
-    z-index: 1;
+    z-index: 3;
 }
 .section1-description{
     font-size: 2vh;
     font-family: 'Archivo';
     width: 50vw;
-    z-index: 1;
+    z-index: 3;
 }
 .section1-img{
     height: 100%;
@@ -165,7 +165,7 @@ body{
     margin: 0;
     padding: 15px;
     padding-right: 200px;
-    padding-left: 40vw;
+    padding-left: 5vw;
     position: relative;
     overflow-y: hidden;
 }
@@ -264,6 +264,35 @@ body{
     opacity: 1;
 }
 
+.link{
+    text-decoration: underline !important;
+    color: rgb(35, 35, 35) !important;
+    cursor: pointer !important;
+    font-family: 'Archivo' !important;
+    transition: color 200ms !important;
+}
+.link:hover{
+    color: rgb(80,80,80) !important;
+}
+
+form{
+    font-family: 'Archivo';
+}
+
+form input{
+    width: 40vw;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+form textarea{
+    width: 40vw;
+}
+
+.contact-section1{
+    padding-left: 5vw;
+}
+
 @media only screen and (max-width: 600px){
     .section1-img{
         left: 50vw;
@@ -300,5 +329,16 @@ body{
     }
     .cover-profile-photo{
         filter: brightness(0.5);
+    }
+    form input{
+        width: 90vw;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin: 0;
+    }
+    
+    form textarea{
+        width: 90vw;
+        margin: 0;
     }
 }
