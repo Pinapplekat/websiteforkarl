@@ -38,19 +38,26 @@ const coverTitle = document.querySelector('.cover-title')
 
 var text = coverTitle.innerHTML
 text = text.split('')
+isTyping = false
 function typeCover(){
+    console.log("Already running? " + isTyping)
+    if(isTyping) return
+    isTyping = true
     coverTitle.innerHTML = ''
+    var iterations = 0
     for (let i=0; i<text.length; i++) { 
         updateText(i); 
+        iterations++
     }
+    if(iterations == text.length) isTyping = false
     setTimeout(() => {
         document.querySelector('.cover-description').classList.add('visible')
-    }, 3500)
+    }, 2500)
 }
 
 function updateText(char){
     setTimeout(() => {
         coverTitle.innerHTML += text[char]
-    }, Math.random()*100 + 100 * char)
+    }, Math.random()*50 + 50 * char)
 }
 typeCover()
