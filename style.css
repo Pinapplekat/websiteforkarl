@@ -217,15 +217,20 @@ body{
     font-family: 'Archivo';
     width: 50vw;
     z-index: 3;
+    background: linear-gradient(to top, #b3a89493, #b3a894);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .section1-img{
     /* -webkit-mask-image:-webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0)); */
     width: 25vw;
     position: absolute;
-    top: 50%;
-    left: 60vw;
+    top: 40%;
+    left: 64vw;
     transform: translate(0, -50%);
+    filter: brightness(0.7);
     right: 0;
     z-index: -1;
 }
@@ -266,6 +271,10 @@ body{
     font-size: 2vh;
     font-family: 'Archivo';
     width: 50vw;
+    background: linear-gradient(to top, #b3a89493, #b3a894);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .section2-img{
     width: 30vw;
