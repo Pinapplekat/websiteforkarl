@@ -565,6 +565,15 @@ form textarea{
         width: 90vw;
         margin: 0;
     } */
+    .contact-form-container{
+        width: 100vw !important;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-form-container input, .contact-form-container textarea{
+        width: 90vw;
+    }
 }
 
 .cover-bg-overlay.contact {
