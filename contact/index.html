@@ -49,6 +49,7 @@
    <div class="contact-form-container">
             <!-- <h2>Contact Us</h2> -->
             <form id="contactForm" action="mailto:contact@karljensen.me">
+                Mailing to: <a href="mailto:contact@karljensen.me">contact@karljensen.me</a><br><br>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -83,11 +84,7 @@
         body{
             background-color: black;
         }
-        .cover.contact .cover-title{
-            left: 50%;
-            transform: translateX(-50%) !important;
-            width: auto;
-        }
+        
         .contact-form-container {
             position: fixed;
             background-color: rgb(26, 26, 26);
@@ -102,6 +99,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-family: 'archivo';
+            color: rgb(170, 170, 170);
         }
 
         h2 {
